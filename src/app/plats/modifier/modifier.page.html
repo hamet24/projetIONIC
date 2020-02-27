@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modifier informations plats</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/plats"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+       <ion-list lines="full">
+    <form [formGroup]="updatePlatForm" (ngSubmit)="updatePLat()">
+      <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input formControlName="nom" type="text" [(ngModel)]="nom" required></ion-input>
+        
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">description</ion-label>
+        <ion-input formControlName="description" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">prix</ion-label>
+        <ion-input formControlName="prix" type="number" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Appliqué</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
